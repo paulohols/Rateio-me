@@ -24,11 +24,12 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Install Dependencies
-        run: npm --prefix . install
-
-      - name: Initialize Capacitor
+      - name: Setup Dependencies and Capacitor
         run: |
+          pwd
+          ls -la
+          npm init -y
+          npm install @capacitor/core@^6.0.0 @capacitor/cli@^6.0.0 @capacitor/android@^6.0.0
           npx cap init "Rateio-me" "com.rateiome.app" --web-dir "www"
           npx cap add android
           npx cap sync android
