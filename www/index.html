@@ -7,24 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Rateio.me</h1>
-    </header>
     <main>
         <form id="rateioForm">
-            <label for="eventName">Event Name:</label><br>
+            <label for="eventName">Nome do Evento:</label><br>
             <input type="text" id="eventName" required><br><br>
 
-            <label for="eventCost">Event Cost:</label><br>
+            <label for="eventCost">Custo:</label><br>
             <input type="number" step="0.01" id="eventCost" required><br><br>
 
-            <label for="serviceChargePercent">Service Charge Percent:</label><br>
+            <label for="serviceChargePercent">Taxas:</label><br>
             <input type="number" step="0.01" id="serviceChargePercent" required><br><br>
 
-            <label for="groupSize">Group Size:</label><br>
+            <label for="groupSize">Quantidade de pessoas:</label><br>
             <input type="number" min="2" max="100" id="groupSize" required><br><br>
 
-            <button type="submit">Calculate Split</button>
+            <button type="submit">Calcular Rateio</button>
         </form>
         <div id="result"></div>
     </main>
