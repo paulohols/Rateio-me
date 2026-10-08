@@ -1,6 +1,8 @@
 name: Build Android APK
 
 on:
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -10,6 +12,11 @@ jobs:
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Verify Files
+        run: ls -la
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
