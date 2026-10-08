@@ -38,7 +38,7 @@ jobs:
 
       - name: Initialize Capacitor
         run: |
-          npx cap init "Rateio.me" "com.rateiome.app" --web-dir "www"
+          npx cap init "Rateio-me" "com.rateiome.app" --web-dir "www"
           npx cap add android
           npx cap sync android
 
